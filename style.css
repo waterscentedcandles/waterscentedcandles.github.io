@@ -1,19 +1,19 @@
 body {
-  background-color: black;
-  color: #39ff14;
-  font-family: 'Courier New', Courier, monospace;
+  background-color: #000000;
+  color: #f5f5dc;
+  font-family: 'Cormorant Garamond', serif;
   text-align: center;
   padding-top: 50px;
 }
 
 .neon-text {
   font-size: 2em;
-  color: #00ffff;
-  text-shadow: 0 0 5px #0ff, 0 0 10px #0ff, 0 0 20px #0ff;
+  color: #d4af37;
+  text-shadow: 0 0 5px #d4af37, 0 0 10px #a50000;
 }
 
 .loading-text {
-  color: #ff66cc;
+  color: #a50000;
 }
 
 .tape-shelf {
@@ -24,27 +24,28 @@ body {
   display: inline-block;
   margin: 10px;
   padding: 15px 30px;
-  background-color: #222;
-  border: 2px solid #00ffff;
-  color: white;
+  background-color: #111111;
+  border: 2px solid #d4af37;
+  color: #f5f5dc;
   cursor: pointer;
   transition: 0.3s;
 }
 
 .tape:hover {
   transform: scale(1.05);
-  background-color: #00ffff;
-  color: black;
+  background-color: #d4af37;
+  color: #000000;
 }
 
 .music-toggle {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background: #ff66cc;
+  background: #a50000;
   border: none;
   padding: 10px 15px;
   font-size: 20px;
   border-radius: 50%;
   cursor: pointer;
 }
+
