@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'Dirtyline';
+  src: url('assets/fonts/Dirtyline%2036daysoftype%202022.woff') format('woff');
+}
+
 body {
   background-color: #000000;
   color: #f5f5dc;
