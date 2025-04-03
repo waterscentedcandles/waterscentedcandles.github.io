@@ -16,7 +16,7 @@ function playTape(section) {
     `,
     contact: `
       <h2 class="neon-text">Contact</h2>
-      <p class="loading-text">Hit me up: <br><a href="mailto:your@email.com">your@email.com</a></p>
+      <p class="loading-text">Hit me up: <br><a href="mailto:audreycuttilan5@gmail.com">audreycuttilan5@gmail.com</a></p>
     `
   };
 
