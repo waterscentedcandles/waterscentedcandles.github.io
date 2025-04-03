@@ -12,11 +12,11 @@ function playTape(section) {
     `,
     projects: `
       <h2 class="neon-text">Projects</h2>
-      <p class="loading-text">Coming soon: film stills, short stories, and visual experiments.</p>
+      <p class="loading-text">Coming soon: film stills, graphic designs, and visual experiments.</p>
     `,
     contact: `
       <h2 class="neon-text">Contact</h2>
-      <p class="loading-text">Hit me up: <br><a href="mailto:audreycuttilan5@gmail.com">audreycuttilan5@gmail.com</a></p>
+     <p class="loading-text">Hit me up: <br><a href="mailto:audreycuttilan5@gmail.com">audreycuttilan5@gmail.com</a></p> 
     `
   };
 
