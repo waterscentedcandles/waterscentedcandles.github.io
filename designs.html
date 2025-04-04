@@ -1,48 +1,56 @@
-<!-- 🎨 Graphic Design Scrapbook Section -->
 <div id="dynamic-section">
-  <h2 class="neon-text">Graphic Design Scrapbook</h2>
-  <div class="scrapbook-grid">
-    <div class="scrap-item">
-      <img src="assets/design1.png" alt="Design 1">
-      <p class="caption">Poster experiment #1 — 90s horror vibes</p>
+  <h2 class="neon-text">Graphic Design Sketchbook</h2>
+
+  <div class="sketchbook-page">
+    <div class="artwork">
+      <img src="assets/sketchbook/my-project.png" alt="Design by Audrey">
     </div>
-    <div class="scrap-item">
-      <img src="assets/design2.png" alt="Design 2">
-      <p class="caption">Magazine mockup — bold & soft contrast</p>
+
+    <div class="post-it pink">
+      <p>Texture: Unsplash</p>
     </div>
-    <div class="scrap-item">
-      <img src="assets/design3.png" alt="Design 3">
-      <p class="caption">Graphic journal — testing font textures</p>
+
+    <div class="post-it lavender">
+      <p>Font: dafont.com</p>
+    </div>
+
+    <div class="post-it peach">
+      <p>Overlay: Mixkit</p>
     </div>
   </div>
 </div>
 
 <style>
-  .scrapbook-grid {
+  .sketchbook-page {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
-    padding: 20px;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+    position: relative;
   }
 
-  .scrap-item {
-    width: 250px;
-    background: #111;
-    border: 2px dashed #d4af37;
-    padding: 15px;
+  .artwork img {
+    width: 80%;
+    border: 2px solid #d4af37;
+    box-shadow: 5px 5px 20px #a50000;
     border-radius: 8px;
-    box-shadow: 0 0 10px #a50000;
   }
 
-  .scrap-item img {
-    width: 100%;
+  .post-it {
+    font-family: 'Courier New', monospace;
+    padding: 15px;
+    width: 250px;
+    margin: 15px;
+    transform: rotate(-2deg);
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+    border: 1px solid #eee;
     border-radius: 4px;
   }
 
-  .caption {
-    font-size: 0.9em;
-    color: #f5f5dc;
-    margin-top: 10px;
-  }
+  .pink { background-color: #ffc1e3; }
+  .lavender { background-color: #e6ccff; }
+  .blue { background-color: #cceeff; }
+  .peach { background-color: #ffe0b2; }
+  .mint { background-color: #ccffcc; }
 </style>
+
