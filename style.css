@@ -1,56 +1,107 @@
-@font-face {
-  font-family: 'Dirtyline';
-  src: url('assets/fonts/Dirtyline%2036daysoftype%202022.woff') format('woff');
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Audrey’s Portfolio</title>
 
-body {
-  background-color: #000000;
-  color: #f5f5dc;
-  font-family: 'Cormorant Garamond', serif;
-  text-align: center;
-  padding-top: 50px;
-}
+  <style>
+    @font-face {
+      font-family: 'Dirtyline';
+      src: url('assets/fonts/Dirtyline%2036daysoftype%202022.woff') format('woff');
+    }
 
-.neon-text {
-  font-size: 2em;
-  color: #d4af37;
-  text-shadow: 0 0 5px #d4af37, 0 0 10px #a50000;
-}
+    body {
+      margin: 0;
+      padding: 0;
+      background: radial-gradient(circle at center, #ffe3ec, #b6f0ff);
+      font-family: 'Courier New', monospace;
+      overflow-x: hidden;
+    }
 
-.loading-text {
-  color: #a50000;
-}
+    .intro-text {
+      font-size: 1.4rem;
+      color: #fff;
+      text-align: center;
+      margin-top: 4rem;
+      line-height: 1.6;
+      padding: 0 2rem;
+      background: linear-gradient(90deg, #ff8ad6, #ffd166, #8effc1, #8acaff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: textWave 6s ease-in-out infinite;
+      text-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+    }
 
-.tape-shelf {
-  margin-top: 40px;
-}
+    @keyframes textWave {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-6px); }
+    }
 
-.tape {
-  display: inline-block;
-  margin: 10px;
-  padding: 15px 30px;
-  background-color: #111111;
-  border: 2px solid #d4af37;
-  color: #f5f5dc;
-  cursor: pointer;
-  transition: 0.3s;
-}
+    .blob {
+      position: absolute;
+      top: 20%;
+      left: 50%;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle at center, #ffd8e7, #b6f0ff);
+      border-radius: 50% 40% 60% 50% / 60% 50% 40% 50%;
+      filter: blur(40px);
+      opacity: 0.6;
+      animation: blobPulse 10s ease-in-out infinite;
+      z-index: 0;
+      transform: translateX(-50%);
+    }
 
-.tape:hover {
-  transform: scale(1.05);
-  background-color: #d4af37;
-  color: #000000;
-}
+    @keyframes blobPulse {
+      0%, 100% {
+        border-radius: 50% 40% 60% 50% / 60% 50% 40% 50%;
+      }
+      50% {
+        border-radius: 60% 50% 40% 60% / 50% 60% 50% 40%;
+      }
+    }
 
-.music-toggle {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: #a50000;
-  border: none;
-  padding: 10px 15px;
-  font-size: 20px;
-  border-radius: 50%;
-  cursor: pointer;
-}
+    .curve-note {
+      font-family: 'Dirtyline', cursive;
+      color: #ff69b4;
+      position: absolute;
+      bottom: 2rem;
+      right: 2rem;
+      transform: rotate(-8deg);
+      font-size: 1.2rem;
+      background: rgba(255, 255, 255, 0.5);
+      padding: 0.5rem 1rem;
+      border-radius: 10px;
+      box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+      z-index: 2;
+    }
+
+    .glow-hover {
+      transition: 0.4s ease;
+    }
+
+    .glow-hover:hover {
+      filter: drop-shadow(0 0 10px #ff8ad6);
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+
+<body>
+  <!-- floating background blob -->
+  <div class="blob"></div>
+
+  <!-- your dreamy glowing intro text -->
+  <div class="intro-text">
+    Hi, I’m Audrey, and I love creating and trying new things.<br>
+    This is my portfolio stitched together from memory and feeling.
+  </div>
+
+  <!-- soft curved handwritten note -->
+  <div class="curve-note">make it with love</div>
+</body>
+</html>
+
+
 
