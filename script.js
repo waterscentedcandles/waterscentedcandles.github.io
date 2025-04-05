@@ -10,11 +10,16 @@ function playTape(section) {
         Here’s my portfolio — a space for experimenting, exploring, and expressing.
       </p>
     `,
- projects: `<script>window.location.href = 'designs.html';</script>`,
+    
+    projects: `
+      <script>
+        window.location.href = 'assets/sketchbook/designs.html';
+      </script>
+    `,
     
     contact: `
       <h2 class="neon-text">Contact</h2>
-     <p class="loading-text">Hit me up: <br><a href="mailto:audreycuttilan5@gmail.com">audreycuttilan5@gmail.com</a></p> 
+      <p class="loading-text">Hit me up: <br><a href="mailto:audreycuttilan5@gmail.com">audreycuttilan5@gmail.com</a></p> 
     `
   };
 
@@ -23,7 +28,6 @@ function playTape(section) {
   div.innerHTML = content[section] || "";
   document.body.appendChild(div);
 }
-
 
 function toggleMusic() {
   const jazz = document.getElementById("jazz");
