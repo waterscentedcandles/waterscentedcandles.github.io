@@ -26,6 +26,27 @@
   animation: textWave 6s ease-in-out infinite;
   text-shadow: 0 0 10px rgba(0, 0, 0, 0.2), 0 0 4px rgba(0, 0, 0, 0.2);
 }
+    .zine-button {
+  display: inline-block;
+  margin: 3rem auto;
+  padding: 1rem 2rem;
+  font-family: 'Courier New', monospace;
+  font-size: 1.1rem;
+  background: #ff8ad6;
+  color: white;
+  text-decoration: none;
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(255, 138, 214, 0.5);
+  transition: all 0.3s ease-in-out;
+}
+
+.zine-button:hover {
+  background: #ff69b4;
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(255, 138, 214, 0.7);
+}
+
 
     @keyframes textWave {
       0%, 100% { transform: translateY(0); }
@@ -38,6 +59,7 @@
   <div class="intro-text">
     Hi, I’m Audrey, and I love creating and trying new things.<br>
     This is my portfolio stitched together from memory and feeling.
+    <a href="print-diary.html" class="zine-button">open my print diary</a>
   </div>
 </body>
 </html>
