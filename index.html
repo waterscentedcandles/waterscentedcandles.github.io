@@ -41,11 +41,13 @@
   box-shadow: 0 0 12px rgba(255, 138, 214, 0.5);
   transition: all 0.3s ease-in-out;
 
-  /* 🧼 anti-blur tweaks */
+  /* anti-blur magic */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
+  transform: translateZ(0); /* helps with some weird render issues */
 }
+
 
 .zine-button:hover {
   background: #ff69b4;
