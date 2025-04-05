@@ -13,7 +13,7 @@ function playTape(section) {
     
     projects: `
       <script>
-        window.location.href = 'assets/sketchbook/designs.html';
+      window.location.href = 'designs.html';
       </script>
     `,
     
