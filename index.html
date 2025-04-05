@@ -31,8 +31,9 @@
   display: inline-block;
   margin: 3rem auto;
   padding: 1rem 2rem;
-  font-family: 'Arial', sans-serif; /* Switch to a modern sans-serif font */
+  font-family: 'Arial', sans-serif;
   font-size: 1.1rem;
+  font-weight: bold; /* Try adding this */
   background: #ff8ad6;
   color: white;
   text-decoration: none;
@@ -45,8 +46,9 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
-  transform: translateZ(0); /* helps with some weird render issues */
+  transform: translateZ(0); /* fixes some rendering issues */
 }
+
 
 .zine-button:hover {
   background: #ff69b4;
