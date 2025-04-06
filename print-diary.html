@@ -103,7 +103,7 @@
 </head>
 <body>
   
-  <div class="about-container">
+  <div class="about-container" id="aboutSection" style="display: none;">
   <h2 class="neon-text">About Me</h2>
   <p class="about-text">
     hi, i’m audrey. i’m 17, and i’m literally in love with creating.<br><br>
@@ -131,6 +131,15 @@
   <img src="assets/sketchbook/horror-poster-audrey.png" alt="Horror Poster by Audrey">
   <p class="caption">Poster experiment - most of these posters are made using stock images and literally made up movies.</p>
 </div>
+
+  <script>
+  document.querySelector('a[href="#about"]').addEventListener('click', function(event) {
+    event.preventDefault();
+    const about = document.getElementById("aboutSection");
+    about.style.display = about.style.display === "none" ? "block" : "none";
+  });
+</script>
+
 
 </body>
 </html>
