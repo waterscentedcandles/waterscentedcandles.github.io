@@ -5,17 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sketchbook</title>
   <style>
-    
+    /* Fade in/out About section */
     #aboutSection {
-  transition: opacity 0.5s ease;
-  opacity: 0;
-  display: none;
-}
+      transition: opacity 0.5s ease;
+      opacity: 0;
+      display: none;
+    }
 
-#aboutSection.show {
-  display: block;
-  opacity: 1;
-}
+    #aboutSection.show {
+      display: block;
+      opacity: 1;
+    }
 
     body {
       margin: 0;
@@ -31,173 +31,133 @@
       color: #000;
     }
 
-.project img {
-  width: 100%;
-  max-width: 100%;
-  max-height: 80vh;
-  object-fit: contain;
-  border-radius: 6px;
-  box-shadow: 4px 4px 20px rgba(0,0,0,0.2);
-}
-
-
-  .project.horror img {
-  width: 100%;
-  border-radius: 6px;
-  filter: contrast(1.1) saturate(1.2);
-  box-shadow: 4px 4px 20px rgba(0,0,0,0.2);
-}
-
+    .project img {
+      width: 100%;
+      max-width: 100%;
+      max-height: 80vh;
+      object-fit: contain;
+      border-radius: 6px;
+      box-shadow: 4px 4px 20px rgba(0,0,0,0.2);
+    }
 
     .caption {
       font-size: 0.95rem;
       color: #333;
     }
+
     .custom-nav {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  padding: 1rem;
-  font-family: 'Courier New', monospace;
-  background-color: #fff8f9;
-  border-bottom: 2px dashed #ff69b4;
-  position: sticky;
-  top: 0;
-  z-index: 10;
-}
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 1rem;
+      font-family: 'Courier New', monospace;
+      background-color: #fff8f9;
+      border-bottom: 2px dashed #ff69b4;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
 
-.custom-nav a {
-  color: #ff69b4;
-  text-decoration: none;
-  font-weight: bold;
-  position: relative;
-  transition: all 0.2s ease-in-out;
-}
+    .custom-nav a {
+      color: #ff69b4;
+      text-decoration: none;
+      font-weight: bold;
+      position: relative;
+      transition: all 0.2s ease-in-out;
+    }
 
-.custom-nav a::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 2px;
-  background: #ff69b4;
-  left: 0;
-  bottom: -4px;
-  transform: scaleX(0);
-  transition: transform 0.3s ease;
-  transform-origin: left;
-}
+    .custom-nav a::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      background: #ff69b4;
+      left: 0;
+      bottom: -4px;
+      transform: scaleX(0);
+      transition: transform 0.3s ease;
+      transform-origin: left;
+    }
 
-.custom-nav a:hover::after,
-.custom-nav a.active::after {
-  transform: scaleX(1);
-}
+    .custom-nav a:hover::after,
+    .custom-nav a.active::after {
+      transform: scaleX(1);
+    }
 
     .about-container {
-  background-color: rgba(255, 240, 250, 0.6);
-  border: 2px dashed #ff8ad6;
-  padding: 2rem;
-  margin: 4rem auto;
-  max-width: 650px;
-  border-radius: 16px;
-  box-shadow: 4px 4px 18px rgba(0, 0, 0, 0.1);
-  font-family: 'Courier New', monospace;
-}
+      background-color: rgba(255, 240, 250, 0.6);
+      border: 2px dashed #ff8ad6;
+      padding: 2rem;
+      margin: 4rem auto;
+      max-width: 650px;
+      border-radius: 16px;
+      box-shadow: 4px 4px 18px rgba(0, 0, 0, 0.1);
+      font-family: 'Courier New', monospace;
+    }
 
-.about-text {
-  color: #4c0060;
-  font-size: 1rem;
-  line-height: 1.8;
-  text-align: left;
-}
-
-    
+    .about-text {
+      color: #4c0060;
+      font-size: 1rem;
+      line-height: 1.8;
+      text-align: left;
+    }
   </style>
 </head>
 <body>
-  
-  <div class="about-container" id="aboutSection">
-  <!-- your about me text -->
-</div>
 
-<div class="project" id="projectSection">
-  <!-- your posters here -->
-</div>
-
-  <div class="about-container" id="aboutSection" style="display: none;">
-  <h2 class="neon-text">About Me</h2>
-  <p class="about-text">
-    hi, i’m audrey. i’m 17, and i’m literally in love with creating.<br><br>
-
-    because honestly? what’s more fun than turning your actual ideas into reality.<br><br>
-
-    i love filming, photography, editing, music — basically anything that lets me build a mood. visual media has always felt like the strongest kind of storytelling to me. it’s everywhere, shaping how we see the world, how we feel, and how we connect.<br><br>
-
-    being part of the creative process just feels better. it feels like home.<br><br>
-
-    i’m also extremely interested — in people, in systems, and in why we make the choices we do. that’s why i’m drawn to philosophy and law, and i’m hoping to study those after high school!!
-  </p>
-</div>
-
+  <!-- Navigation -->
   <nav class="custom-nav">
-  <a href="index.html">home</a>
-  <a href="print-diary.html" class="active">print diary</a>
-  <a href="#about">about</a>
+    <a href="index.html">home</a>
+    <a href="print-diary.html" class="active">print diary</a>
+    <a href="#about">about</a>
+    <a href="#">scraps</a>
+  </nav>
 
-  <a href="#">scraps</a>
-</nav>
+  <!-- About Me (initially hidden) -->
+  <div class="about-container" id="aboutSection">
+    <h2 class="neon-text">About Me</h2>
+    <p class="about-text">
+      hi, i’m audrey. i’m 17, and i’m literally in love with creating.<br><br>
+      because honestly? what’s more fun than turning your actual ideas into reality.<br><br>
+      i love filming, photography, editing, music — basically anything that lets me build a mood. visual media has always felt like the strongest kind of storytelling to me. it’s everywhere, shaping how we see the world, how we feel, and how we connect.<br><br>
+      being part of the creative process just feels better. it feels like home.<br><br>
+      i’m also extremely interested — in people, in systems, and in why we make the choices we do. that’s why i’m drawn to philosophy and law, and i’m hoping to study those after high school!!
+    </p>
+  </div>
 
+  <!-- Sketchbook Header -->
   <div class="sketchbook-header">🖋 Print Diary</div>
-  
-<div class="project" id="projectSection">
-  <img src="assets/sketchbook/horror-poster-audrey.png" alt="Horror Poster by Audrey">
-  <p class="caption">Poster experiment - most of these posters are made using stock images and literally made up movies.</p>
-</div>
 
+  <!-- Project Poster Section -->
+  <div class="project" id="projectSection">
+    <img src="assets/sketchbook/horror-poster-audrey.png" alt="Horror Poster by Audrey">
+    <p class="caption">Poster experiment - most of these posters are made using stock images and literally made up movies.</p>
+  </div>
+
+  <!-- Toggle Script -->
   <script>
-  document.querySelector('a[href="#about"]').addEventListener('click', function(event) {
-    event.preventDefault();
-    const about = document.getElementById("aboutSection");
-    about.style.display = about.style.display === "none" ? "block" : "none";
-  });
-</script>
-<script>
-  document.querySelector('a[href="#about"]').addEventListener('click', function(event) {
-    event.preventDefault();
+    document.querySelector('a[href="#about"]').addEventListener('click', function(event) {
+      event.preventDefault();
 
-    const about = document.getElementById("aboutSection");
-    const projects = document.getElementById("projectSection");
+      const about = document.getElementById("aboutSection");
+      const projects = document.getElementById("projectSection");
 
-    // Toggle About section
-    const isAboutVisible = about.style.display === "block";
-    about.style.display = isAboutVisible ? "none" : "block";
+      const isShowing = about.classList.contains("show");
 
-    // Hide/show the poster section
-    projects.style.display = isAboutVisible ? "block" : "none";
-  });
-</script>
-
-<script>
-  document.querySelector('a[href="#about"]').addEventListener('click', function(event) {
-    event.preventDefault();
-
-    const about = document.getElementById("aboutSection");
-    const projects = document.getElementById("projectSection");
-
-    const isShowing = about.classList.contains("show");
-
-    if (isShowing) {
-      about.classList.remove("show");
-      setTimeout(() => {
-        about.style.display = "none";
-        projects.style.display = "block";
-      }, 500); // waits for fade-out
-    } else {
-      about.style.display = "block";
-      setTimeout(() => about.classList.add("show"), 10);
-      projects.style.display = "none";
-    }
-  });
-</script>
+      if (isShowing) {
+        about.classList.remove("show");
+        setTimeout(() => {
+          about.style.display = "none";
+          projects.style.display = "block";
+        }, 500);
+      } else {
+        about.style.display = "block";
+        setTimeout(() => about.classList.add("show"), 10);
+        projects.style.display = "none";
+      }
+    });
+  </script>
 
 </body>
 </html>
+
