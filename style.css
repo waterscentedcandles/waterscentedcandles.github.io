@@ -85,6 +85,25 @@
       filter: drop-shadow(0 0 10px #ff8ad6);
       transform: scale(1.05);
     }
+
+.about-container {
+  background-color: rgba(255, 240, 250, 0.6);
+  border: 2px dashed #ff8ad6;
+  padding: 2rem;
+  margin: 4rem auto;
+  max-width: 650px;
+  border-radius: 16px;
+  box-shadow: 4px 4px 18px rgba(0, 0, 0, 0.1);
+  font-family: 'Courier New', monospace;
+}
+
+.about-text {
+  color: #4c0060;
+  font-size: 1rem;
+  line-height: 1.8;
+  text-align: left;
+}
+
   </style>
 </head>
 
