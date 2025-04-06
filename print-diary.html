@@ -5,6 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sketchbook</title>
   <style>
+    
+    #aboutSection {
+  transition: opacity 0.5s ease;
+  opacity: 0;
+  display: none;
+}
+
+#aboutSection.show {
+  display: block;
+  opacity: 1;
+}
+
     body {
       margin: 0;
       padding: 2rem;
@@ -103,6 +115,14 @@
 </head>
 <body>
   
+  <div class="about-container" id="aboutSection">
+  <!-- your about me text -->
+</div>
+
+<div class="project" id="projectSection">
+  <!-- your posters here -->
+</div>
+
   <div class="about-container" id="aboutSection" style="display: none;">
   <h2 class="neon-text">About Me</h2>
   <p class="about-text">
@@ -128,7 +148,7 @@
 
   <div class="sketchbook-header">🖋 Print Diary</div>
   
-<div class="project">
+<div class="project" id="projectSection">
   <img src="assets/sketchbook/horror-poster-audrey.png" alt="Horror Poster by Audrey">
   <p class="caption">Poster experiment - most of these posters are made using stock images and literally made up movies.</p>
 </div>
@@ -140,7 +160,44 @@
     about.style.display = about.style.display === "none" ? "block" : "none";
   });
 </script>
+<script>
+  document.querySelector('a[href="#about"]').addEventListener('click', function(event) {
+    event.preventDefault();
 
+    const about = document.getElementById("aboutSection");
+    const projects = document.getElementById("projectSection");
+
+    // Toggle About section
+    const isAboutVisible = about.style.display === "block";
+    about.style.display = isAboutVisible ? "none" : "block";
+
+    // Hide/show the poster section
+    projects.style.display = isAboutVisible ? "block" : "none";
+  });
+</script>
+
+<script>
+  document.querySelector('a[href="#about"]').addEventListener('click', function(event) {
+    event.preventDefault();
+
+    const about = document.getElementById("aboutSection");
+    const projects = document.getElementById("projectSection");
+
+    const isShowing = about.classList.contains("show");
+
+    if (isShowing) {
+      about.classList.remove("show");
+      setTimeout(() => {
+        about.style.display = "none";
+        projects.style.display = "block";
+      }, 500); // waits for fade-out
+    } else {
+      about.style.display = "block";
+      setTimeout(() => about.classList.add("show"), 10);
+      projects.style.display = "none";
+    }
+  });
+</script>
 
 </body>
 </html>
