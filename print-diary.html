@@ -134,29 +134,32 @@
     <p class="caption">Poster experiment - most of these posters are made using stock images and literally made up movies.</p>
   </div>
 
-  <!-- Toggle Script -->
-  <script>
-    document.querySelector('a[href="#about"]').addEventListener('click', function(event) {
-      event.preventDefault();
+<script>
+  document.querySelector('a[href="#about"]').addEventListener('click', function(event) {
+    event.preventDefault();
 
-      const about = document.getElementById("aboutSection");
-      const projects = document.getElementById("projectSection");
+    const about = document.getElementById("aboutSection");
+    const projects = document.getElementById("projectSection");
+    const header = document.getElementById("headerText"); // ✅ THIS LINE!
 
-      const isShowing = about.classList.contains("show");
+    const isShowing = about.classList.contains("show");
 
-      if (isShowing) {
-        about.classList.remove("show");
-        setTimeout(() => {
-          about.style.display = "none";
-          projects.style.display = "block";
-        }, 500);
-      } else {
-        about.style.display = "block";
-        setTimeout(() => about.classList.add("show"), 10);
-        projects.style.display = "none";
-      }
-    });
-  </script>
+    if (isShowing) {
+      about.classList.remove("show");
+      setTimeout(() => {
+        about.style.display = "none";
+        projects.style.display = "block";
+        header.style.display = "block"; // ✅ Show header again
+      }, 500);
+    } else {
+      about.style.display = "block";
+      setTimeout(() => about.classList.add("show"), 10);
+      projects.style.display = "none";
+      header.style.display = "none"; // ✅ Hide header
+    }
+  });
+</script>
+
 
 </body>
 </html>
